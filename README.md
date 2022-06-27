@@ -1,57 +1,58 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# My_Portfolio
 
-> Description the project.
+> My Portfolio is a project detailing my work as a software engineer. It also gives a description of who I am and how to link with me on social media platforms.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- HTML, CSS
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+You need to have a code editor to be able to run the commands in the terminal. VSCode is most preferred.
 
 ### Setup
+You need to download the linters folder and copy it to your project.
 
 ### Install
+You need to install the linters and the fontawesome library. (Preferred)
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+You need to have a code editor to be able to run the commands in the terminal. VSCode is most preferred
+
+### Setup
+You need to download the linters folder and copy it to your project
+
+### Install
+Install the linters folder to your project.
+Install the fontawesome for icons in the project (Preferrable)
+
+
 
 ### Usage
 
 ### Run tests
 
+
 ### Deployment
+
 
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Marlyn Mayienga**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
+- GitHub: [@Marlyn_Mayienga](https://github.com/Marlyn_Mayienga)
+- Twitter: [@Merl_Mayienga](https://twitter.com/Merl_Mayienga)
+- LinkedIn: [Marlyn_Mayienga](https://linkedin.com/in/Marlyn_Mayienga)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

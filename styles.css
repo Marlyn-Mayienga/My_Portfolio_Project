@@ -1,0 +1,240 @@
+body {
+  scroll-behavior: smooth;
+  background-color: #e5e5e5;
+  color: #344563;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white !important;
+}
+
+.container-nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.nav-bar {
+  display: flex;
+  list-style: none;
+  flex: 0.3;
+  color: white;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-bar a {
+  color: #344563;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: medium;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.introduction {
+  padding: 40vh 0;
+  border-bottom-left-radius: 80px;
+  background-color: white;
+  background-image: url(./assets/Rectangle\ 6.png);
+  background-repeat: no-repeat;
+  background-position: absolute;
+  bottom: 9000px;
+  right: 500px;
+  left: 7900px;
+  top: 600px;
+  margin-top: 50px;
+  padding-left: 100px;
+}
+
+.logo-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #6070ff;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.greeting {
+  font-style: bold;
+  font-size: 30px;
+  align-content: center;
+  letter-spacing: 0.37px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.first-ellipse {
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 40px;
+  top: 110px;
+}
+
+.first_img {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+
+.second_img {
+  position: absolute;
+  top: 100px;
+  right: 450px;
+}
+
+.img_three {
+  position: absolute;
+  top: 500px;
+  left: 150px;
+}
+
+.img_four {
+  position: absolute;
+  right: 400px;
+  top: 500px;
+}
+
+.about-myself .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.connect {
+  font-style: medium;
+  font-size: 10px;
+  color: #7f8cff;
+}
+
+.column {
+  width: 50%;
+  flex: 0 0 50%;
+  margin: 10px;
+}
+
+.social-links ul {
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-left: -5px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  width: auto;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: black;
+  width: auto;
+}
+
+.ellipse_cut {
+  display: none;
+}
+
+@media only screen and (max-width: 770px) {
+  body {
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container-nav {
+    margin: 0;
+  }
+
+  .hamburger-btn {
+    color: #6070ff;
+    display: block;
+    font-size: 1em;
+    z-index: 100;
+    position: fixed;
+    right: 100px;
+    top: 20px;
+  }
+
+  .nav-bar ul {
+    display: none;
+  }
+
+  .introduction {
+    margin-top: 50px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: absolute;
+    top: 10px;
+    padding-left: 0 !important;
+  }
+
+  .greeting {
+    margin-top: 70px;
+  }
+
+  .first-ellipse {
+    display: none;
+  }
+
+  .ellipse_cut {
+    display: block;
+    left: -15px;
+    position: absolute;
+    top: 70px;
+  }
+
+  .first_img {
+    position: absolute;
+    top: 100px;
+    right: 0;
+  }
+
+  .second_img {
+    position: absolute;
+    top: 100px;
+    right: 250px;
+  }
+
+  .img_three {
+    position: absolute;
+    top: 450px;
+    left: 450px;
+  }
+
+  .img_four {
+    position: absolute;
+    right: 150px;
+    top: 525px;
+  }
+}
