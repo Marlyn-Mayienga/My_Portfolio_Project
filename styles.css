@@ -23,7 +23,7 @@ header {
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 
 .nav-bar {
@@ -80,8 +80,10 @@ header {
 }
 
 .greeting {
+  color: #344563;
   font-style: bold;
-  font-size: 30px;
+  font-weight: 900;
+  font-size: 40px;
   align-content: center;
   letter-spacing: 0.37px;
 }
@@ -91,35 +93,61 @@ header {
   margin: 0 auto;
 }
 
+.first-paragraph {
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: regular;
+}
+
 .first-ellipse {
+  background-image: url("./assets/ellipse_11.png");
   background-repeat: no-repeat;
   position: absolute;
   left: 40px;
   top: 110px;
+  width: 100px;
+  height: 100px;
 }
 
 .first_img {
+  background-image: url("./assets/first_img1.png");
   position: absolute;
+  background-repeat: no-repeat;
   top: 100px;
-  right: 20px;
+  right: 0;
+  width: 100px;
+  height: 100px;
 }
 
 .second_img {
+  background-image: url("./assets/img_twp.png");
   position: absolute;
+  background-repeat: no-repeat;
   top: 100px;
-  right: 450px;
+  right: 600px;
+  width: 100px;
+  height: 100px;
 }
 
 .img_three {
+  background-image: url("./assets/img_three.png");
+  background-repeat: no-repeat;
   position: absolute;
-  top: 500px;
+  top: 550px;
   left: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .img_four {
+  background-image: url("./assets/img_four.png");
+  background-repeat: no-repeat;
   position: absolute;
   right: 400px;
-  top: 500px;
+  top: 550px;
+  width: 200px;
+  height: 200px;
 }
 
 .about-myself .row {
@@ -161,15 +189,16 @@ header {
   width: auto;
 }
 
-.ellipse_cut {
-  display: none;
-}
-
 @media only screen and (max-width: 770px) {
   body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+  }
+
+  .header {
+    margin: 0 auto;
+    max-width: 448px;
   }
 
   .container-nav {
@@ -180,10 +209,11 @@ header {
     color: #6070ff;
     display: block;
     font-size: 1em;
-    z-index: 100;
+    z-index: 1;
     position: fixed;
-    right: 100px;
+    right: 30px;
     top: 20px;
+    align-items: left;
   }
 
   .nav-bar ul {
@@ -191,16 +221,12 @@ header {
   }
 
   .introduction {
-    margin-top: 50px;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: absolute;
-    top: 10px;
-    padding-left: 0 !important;
+    margin-top: 10px;
+    padding: 25vh 0;
   }
 
   .greeting {
-    margin-top: 70px;
+    margin-top: 30px;
   }
 
   .first-ellipse {
@@ -208,33 +234,53 @@ header {
   }
 
   .ellipse_cut {
+    background-image: url("./assets/ellipse_cut3.png");
     display: block;
+    background-repeat: no-repeat;
     left: -15px;
     position: absolute;
     top: 70px;
+    width: 100px;
+    height: 100px;
   }
 
   .first_img {
+    background-image: url("./assets/first_img1.png");
     position: absolute;
+    background-repeat: no-repeat;
     top: 100px;
     right: 0;
+    width: 100px;
+    height: 100px;
   }
 
   .second_img {
+    background-image: url("./assets/img_twp.png");
     position: absolute;
-    top: 100px;
-    right: 250px;
+    background-repeat: no-repeat;
+    top: 130px;
+    right: 150px;
+    width: 100px;
+    height: 100px;
   }
 
   .img_three {
+    background-image: url("./assets/img_three.png");
+    background-repeat: no-repeat;
     position: absolute;
-    top: 450px;
-    left: 450px;
+    top: 500px;
+    left: 260px;
+    width: 100px;
+    height: 100px;
   }
 
   .img_four {
+    background-image: url("./assets/img_four.png");
+    background-repeat: no-repeat;
     position: absolute;
-    right: 150px;
-    top: 525px;
+    right: 100px;
+    top: 650px;
+    width: 200px;
+    height: 200px;
   }
 }
