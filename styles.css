@@ -23,7 +23,7 @@ header {
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 
 .nav-bar {
@@ -56,13 +56,16 @@ header {
   padding: 40vh 0;
   border-bottom-left-radius: 80px;
   background-color: white;
-  background-image: url(./assets/Rectangle\ 6.png);
+  background-image: url("./assets/semi_moon.png"),
+    url("./assets/rectangle_6.png"), url("./assets/Rectangle\ 7.png"),
+    url("./assets/Ellipse_5.png"), url("./assets/rectangle_4.png"),
+    url("./assets/ellipse_3.png"), url("./assets/ellipse_13.png"),
+    url("./assets/Ellipse_12.png"), url("./assets/rectangle_5.png"),
+    url("./assets/ellipse_4.png");
   background-repeat: no-repeat;
-  background-position: absolute;
-  bottom: 9000px;
-  right: 500px;
-  left: 7900px;
-  top: 600px;
+  background-size: auto, auto, auto, auto, 120px, 100px;
+  background-position: 100px 70px, 50px 20px, 30% 90%, 50% 50%, 91% 90%, 93% 98%,
+    90% 90%, 80% 85%;
   margin-top: 50px;
   padding-left: 100px;
 }
@@ -80,8 +83,10 @@ header {
 }
 
 .greeting {
+  color: #091e42;
   font-style: bold;
-  font-size: 30px;
+  font-weight: 900;
+  font-size: 40px;
   align-content: center;
   letter-spacing: 0.37px;
 }
@@ -91,35 +96,11 @@ header {
   margin: 0 auto;
 }
 
-.first-ellipse {
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 40px;
-  top: 110px;
-}
-
-.first_img {
-  position: absolute;
-  top: 100px;
-  right: 20px;
-}
-
-.second_img {
-  position: absolute;
-  top: 100px;
-  right: 450px;
-}
-
-.img_three {
-  position: absolute;
-  top: 500px;
-  left: 150px;
-}
-
-.img_four {
-  position: absolute;
-  right: 400px;
-  top: 500px;
+.first-paragraph {
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: regular;
 }
 
 .about-myself .row {
@@ -159,7 +140,7 @@ header {
   margin: 0 10px;
   color: #505f79;
   width: auto;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .ellipse_cut {
@@ -197,6 +178,11 @@ header {
   background-color: white;
 }
 
+.resume:hover {
+  background-color: #6070ff;
+  color: white;
+  cursor: pointer;
+}
 .contacts {
   display: flex;
   align-items: center;
@@ -375,6 +361,12 @@ form input {
   background-color: white;
 }
 
+.see-project:hover {
+  background-color: #6070ff;
+  color: white;
+  cursor: pointer;
+}
+
 .work-item-detail {
   display: flex;
   flex-direction: column;
@@ -392,6 +384,11 @@ form input {
     overflow-x: hidden;
   }
 
+  .header {
+    margin: 0 auto;
+    max-width: 448px;
+  }
+
   .container-nav {
     margin: 0;
   }
@@ -400,10 +397,11 @@ form input {
     color: #6070ff;
     display: block;
     font-size: 1em;
-    z-index: 100;
+    z-index: 1;
     position: fixed;
-    right: 100px;
+    right: 30px;
     top: 20px;
+    align-items: left;
   }
 
   .nav-bar ul {
@@ -411,51 +409,23 @@ form input {
   }
 
   .introduction {
-    margin-top: 50px;
-    background-image: none;
+    background-image: url("./assets/semi_moon.png"),
+      url("./assets/rectangle_6.png"), url("./assets/Rectangle\ 7.png"),
+      url("./assets/Ellipse_5.png"), url("./assets/rectangle_4.png"),
+      url("./assets/ellipse_3.png"), url("./assets/ellipse_13.png"),
+      url("./assets/Ellipse_12.png"), url("./assets/rectangle_5.png"),
+      url("./assets/ellipse_4.png");
     background-repeat: no-repeat;
-    background-position: absolute;
-    top: 10px;
-    padding-left: 0 !important;
+    background-size: auto, auto, auto, auto, 120px, 100px;
+    background-position: -40px 70px, -60px 20px, 110px 140px, 130px 155px,
+      270px 90px, 300px 140px, 86% 74%, 88% 70%, 50% 95%, 72% 91%;
+    margin-top: 10px;
+    padding: 25vh 0;
+    margin-bottom: 30px;
   }
 
   .greeting {
     margin-top: 70px;
-  }
-
-  .first-ellipse {
-    display: none;
-  }
-
-  .ellipse_cut {
-    display: block;
-    left: -15px;
-    position: absolute;
-    top: 70px;
-  }
-
-  .first_img {
-    position: absolute;
-    top: 100px;
-    right: 0;
-  }
-
-  .second_img {
-    position: absolute;
-    top: 100px;
-    right: 250px;
-  }
-
-  .img_three {
-    position: absolute;
-    top: 450px;
-    left: 450px;
-  }
-
-  .img_four {
-    position: absolute;
-    right: 150px;
-    top: 525px;
   }
 
   .images {
@@ -469,6 +439,7 @@ form input {
   .works {
     display: flex;
     flex-direction: column;
+    row-gap: 6rem;
   }
 
   .work-item {
