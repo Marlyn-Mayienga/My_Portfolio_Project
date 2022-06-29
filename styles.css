@@ -339,9 +339,10 @@ form input {
   border-radius: 6px;
 }
 
-.work-item:first-child{
+.work-item:first-child {
   margin-top: 30px;
 }
+
 .project-tags {
   margin-bottom: 30px;
 }
