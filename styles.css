@@ -23,7 +23,7 @@ header {
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 
 .nav-bar {
@@ -56,13 +56,20 @@ header {
   padding: 40vh 0;
   border-bottom-left-radius: 80px;
   background-color: white;
-  background-image: url(./assets/Rectangle\ 6.png);
+  background-image:
+    url("./assets/semi_moon.png"),
+    url("./assets/rectangle_6.png"),
+    url("./assets/Rectangle\ 7.png"),
+    url("./assets/Ellipse_5.png"),
+    url("./assets/rectangle_4.png"),
+    url("./assets/ellipse_3.png"),
+    url("./assets/ellipse_13.png"),
+    url("./assets/Ellipse_12.png"),
+    url("./assets/rectangle_5.png"),
+    url("./assets/ellipse_4.png");
   background-repeat: no-repeat;
-  background-position: absolute;
-  bottom: 9000px;
-  right: 500px;
-  left: 7900px;
-  top: 600px;
+  background-size: auto, auto, auto, auto, 120px, 100px;
+  background-position: 100px 70px, 50px 20px, 30% 90%, 50% 50%, 91% 90%, 93% 98%, 90% 90%, 80% 85%,;
   margin-top: 50px;
   padding-left: 100px;
 }
@@ -80,8 +87,10 @@ header {
 }
 
 .greeting {
+  color: #091e42;
   font-style: bold;
-  font-size: 30px;
+  font-weight: 900;
+  font-size: 40px;
   align-content: center;
   letter-spacing: 0.37px;
 }
@@ -91,35 +100,61 @@ header {
   margin: 0 auto;
 }
 
+.first-paragraph {
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: regular;
+}
+
 .first-ellipse {
+  background-image: url("./assets/ellipse_11.png");
   background-repeat: no-repeat;
   position: absolute;
   left: 40px;
   top: 110px;
+  width: 100px;
+  height: 100px;
 }
 
 .first_img {
+  background-image: url("./assets/first_img1.png");
   position: absolute;
+  background-repeat: no-repeat;
   top: 100px;
-  right: 20px;
+  right: 0;
+  width: 100px;
+  height: 100px;
 }
 
 .second_img {
+  background-image: url("./assets/img_twp.png");
   position: absolute;
+  background-repeat: no-repeat;
   top: 100px;
-  right: 450px;
+  right: 600px;
+  width: 100px;
+  height: 100px;
 }
 
 .img_three {
+  background-image: url("./assets/img_three.png");
+  background-repeat: no-repeat;
   position: absolute;
-  top: 500px;
+  top: 550px;
   left: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 .img_four {
+  background-image: url("./assets/img_four.png");
+  background-repeat: no-repeat;
   position: absolute;
   right: 400px;
-  top: 500px;
+  top: 550px;
+  width: 200px;
+  height: 200px;
 }
 
 .about-myself .row {
@@ -129,7 +164,7 @@ header {
 
 .connect {
   font-style: medium;
-  font-size: 10px;
+  font-size: 12px;
   color: #7f8cff;
 }
 
@@ -159,11 +194,7 @@ header {
   margin: 0 10px;
   color: #505f79;
   width: auto;
-  font-size: 1.5rem;
-}
-
-.ellipse_cut {
-  display: none;
+  font-size: 1.2rem;
 }
 
 .about-myself {
@@ -392,6 +423,11 @@ form input {
     overflow-x: hidden;
   }
 
+  .header {
+    margin: 0 auto;
+    max-width: 448px;
+  }
+
   .container-nav {
     margin: 0;
   }
@@ -400,10 +436,11 @@ form input {
     color: #6070ff;
     display: block;
     font-size: 1em;
-    z-index: 100;
+    z-index: 1;
     position: fixed;
-    right: 100px;
+    right: 30px;
     top: 20px;
+    align-items: left;
   }
 
   .nav-bar ul {
@@ -411,16 +448,26 @@ form input {
   }
 
   .introduction {
-    margin-top: 50px;
-    background-image: none;
+    background-image:
+      url("./assets/semi_moon.png"),
+      url("./assets/rectangle_6.png"),
+      url("./assets/Rectangle\ 7.png"),
+      url("./assets/Ellipse_5.png"),
+      url("./assets/rectangle_4.png"),
+      url("./assets/ellipse_3.png"),
+      url("./assets/ellipse_13.png"),
+      url("./assets/Ellipse_12.png"),
+      url("./assets/rectangle_5.png"),
+      url("./assets/ellipse_4.png");
     background-repeat: no-repeat;
-    background-position: absolute;
-    top: 10px;
-    padding-left: 0 !important;
+    background-size: auto, auto, auto, auto, 120px, 100px;
+    background-position: -40px 70px, -60px 20px, 110px 140px, 130px 155px, 270px 90px, 300px 140px, 86% 74%, 88% 70%, 50% 95%, 72% 91%;
+    margin-top: 10px;
+    padding: 25vh 0;
   }
 
   .greeting {
-    margin-top: 70px;
+    margin-top: 30px;
   }
 
   .first-ellipse {
@@ -428,34 +475,54 @@ form input {
   }
 
   .ellipse_cut {
+    background-image: url("./assets/ellipse_cut3.png");
     display: block;
+    background-repeat: no-repeat;
     left: -15px;
     position: absolute;
     top: 70px;
+    width: 100px;
+    height: 100px;
   }
 
   .first_img {
+    background-image: url("./assets/first_img1.png");
     position: absolute;
+    background-repeat: no-repeat;
     top: 100px;
     right: 0;
+    width: 100px;
+    height: 100px;
   }
 
   .second_img {
+    background-image: url("./assets/img_twp.png");
     position: absolute;
-    top: 100px;
-    right: 250px;
+    background-repeat: no-repeat;
+    top: 130px;
+    right: 150px;
+    width: 100px;
+    height: 100px;
   }
 
   .img_three {
+    background-image: url("./assets/img_three.png");
+    background-repeat: no-repeat;
     position: absolute;
-    top: 450px;
-    left: 450px;
+    top: 500px;
+    left: 260px;
+    width: 100px;
+    height: 100px;
   }
 
   .img_four {
+    background-image: url("./assets/img_four.png");
+    background-repeat: no-repeat;
     position: absolute;
-    right: 150px;
-    top: 525px;
+    right: 100px;
+    top: 650px;
+    width: 200px;
+    height: 200px;
   }
 
   .images {
