@@ -1,6 +1,6 @@
 body {
   scroll-behavior: smooth;
-  background-color: #e5e5e5;
+  background-color: #E5E5E5;
   color: #344563;
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -281,7 +281,7 @@ header {
 
 h4 {
   color: #7f8cff;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
 }
 
