@@ -1,0 +1,308 @@
+body {
+  scroll-behavior: smooth;
+  background-color: #e5e5e5;
+  color: #344563;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white !important;
+}
+
+.container-nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.nav-bar {
+  display: flex;
+  list-style: none;
+  flex: 0.3;
+  color: white;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-bar a {
+  color: #344563;
+  text-decoration: none;
+  font-size: 15px;
+  font-style: medium;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.introduction {
+  padding: 40vh 0;
+  border-bottom-left-radius: 80px;
+  background-color: white;
+  background-image:
+    url("./assets/semi_moon.png"),
+    url("./assets/rectangle_6.png"),
+    url("./assets/Rectangle\ 7.png"),
+    url("./assets/Ellipse_5.png"),
+    url("./assets/rectangle_4.png"),
+    url("./assets/ellipse_3.png"),
+    url("./assets/ellipse_13.png"),
+    url("./assets/Ellipse_12.png"),
+    url("./assets/rectangle_5.png"),
+    url("./assets/ellipse_4.png");
+  background-repeat: no-repeat;
+  background-size: auto, auto, auto, auto, 120px, 100px;
+  background-position: 100px 70px, 50px 20px, 30% 90%, 50% 50%, 91% 90%, 93% 98%, 90% 90%, 80% 85%,;
+  margin-top: 50px;
+  padding-left: 100px;
+}
+
+.logo-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #6070ff;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.greeting {
+  color: #091e42;
+  font-style: bold;
+  font-weight: 900;
+  font-size: 40px;
+  align-content: center;
+  letter-spacing: 0.37px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.first-paragraph {
+  color: #344563;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: regular;
+}
+
+.first-ellipse {
+  background-image: url("./assets/ellipse_11.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 40px;
+  top: 110px;
+  width: 100px;
+  height: 100px;
+}
+
+.first_img {
+  background-image: url("./assets/first_img1.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 100px;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.second_img {
+  background-image: url("./assets/img_twp.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 100px;
+  right: 600px;
+  width: 100px;
+  height: 100px;
+}
+
+.img_three {
+  background-image: url("./assets/img_three.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 550px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+}
+
+.img_four {
+  background-image: url("./assets/img_four.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 400px;
+  top: 550px;
+  width: 200px;
+  height: 200px;
+}
+
+.about-myself .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.connect {
+  font-style: medium;
+  font-size: 12px;
+  color: #7f8cff;
+}
+
+.column {
+  width: 50%;
+  flex: 0 0 50%;
+  margin: 10px;
+}
+
+.social-links ul {
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-left: -5px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  width: auto;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #505f79;
+  width: auto;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 770px) {
+  body {
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .header {
+    margin: 0 auto;
+    max-width: 448px;
+  }
+
+  .container-nav {
+    margin: 0;
+  }
+
+  .hamburger-btn {
+    color: #6070ff;
+    display: block;
+    font-size: 1em;
+    z-index: 1;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    align-items: left;
+  }
+
+  .nav-bar ul {
+    display: none;
+  }
+
+  .introduction {
+    background-image:
+      url("./assets/semi_moon.png"),
+      url("./assets/rectangle_6.png"),
+      url("./assets/Rectangle\ 7.png"),
+      url("./assets/Ellipse_5.png"),
+      url("./assets/rectangle_4.png"),
+      url("./assets/ellipse_3.png"),
+      url("./assets/ellipse_13.png"),
+      url("./assets/Ellipse_12.png"),
+      url("./assets/rectangle_5.png"),
+      url("./assets/ellipse_4.png");
+    background-repeat: no-repeat;
+    background-size: auto, auto, auto, auto, 120px, 100px;
+    background-position: -40px 70px, -60px 20px, 110px 140px, 130px 155px, 270px 90px, 300px 140px, 86% 74%, 88% 70%, 50% 95%, 72% 91%;
+    margin-top: 10px;
+    padding: 25vh 0;
+  }
+
+  .greeting {
+    margin-top: 30px;
+  }
+
+  .first-ellipse {
+    display: none;
+  }
+
+  .ellipse_cut {
+    background-image: url("./assets/ellipse_cut3.png");
+    display: block;
+    background-repeat: no-repeat;
+    left: -15px;
+    position: absolute;
+    top: 70px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .first_img {
+    background-image: url("./assets/first_img1.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 100px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .second_img {
+    background-image: url("./assets/img_twp.png");
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 130px;
+    right: 150px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .img_three {
+    background-image: url("./assets/img_three.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 500px;
+    left: 260px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .img_four {
+    background-image: url("./assets/img_four.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 100px;
+    top: 650px;
+    width: 200px;
+    height: 200px;
+  }
+}
