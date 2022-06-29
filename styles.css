@@ -56,9 +56,20 @@ header {
   padding: 40vh 0;
   border-bottom-left-radius: 80px;
   background-color: white;
-  background-image: url("./assets/semi_moon.png"),url("./assets/rectangle_6.png");
+  background-image:
+    url("./assets/semi_moon.png"),
+    url("./assets/rectangle_6.png"),
+    url("./assets/Rectangle\ 7.png"),
+    url("./assets/Ellipse_5.png"),
+    url("./assets/rectangle_4.png"),
+    url("./assets/ellipse_3.png"),
+    url("./assets/ellipse_13.png"),
+    url("./assets/Ellipse_12.png"),
+    url("./assets/rectangle_5.png"),
+    url("./assets/ellipse_4.png");
   background-repeat: no-repeat;
-  background-position:100px 70px, 50px 20px;
+  background-size: auto, auto, auto, auto, 120px, 100px;
+  background-position: 100px 70px, 50px 20px, 30% 90%, 50% 50%, 91% 90%, 93% 98%, 90% 90%, 80% 85%,;
   margin-top: 50px;
   padding-left: 100px;
 }
@@ -76,7 +87,7 @@ header {
 }
 
 .greeting {
-  color: #344563;
+  color: #091e42;
   font-style: bold;
   font-weight: 900;
   font-size: 40px;
@@ -153,7 +164,7 @@ header {
 
 .connect {
   font-style: medium;
-  font-size: 10px;
+  font-size: 12px;
   color: #7f8cff;
 }
 
@@ -181,8 +192,9 @@ header {
 
 .social-links a {
   margin: 0 10px;
-  color: black;
+  color: #505f79;
   width: auto;
+  font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 770px) {
@@ -217,6 +229,20 @@ header {
   }
 
   .introduction {
+    background-image:
+      url("./assets/semi_moon.png"),
+      url("./assets/rectangle_6.png"),
+      url("./assets/Rectangle\ 7.png"),
+      url("./assets/Ellipse_5.png"),
+      url("./assets/rectangle_4.png"),
+      url("./assets/ellipse_3.png"),
+      url("./assets/ellipse_13.png"),
+      url("./assets/Ellipse_12.png"),
+      url("./assets/rectangle_5.png"),
+      url("./assets/ellipse_4.png");
+    background-repeat: no-repeat;
+    background-size: auto, auto, auto, auto, 120px, 100px;
+    background-position: -40px 70px, -60px 20px, 110px 140px, 130px 155px, 270px 90px, 300px 140px, 86% 74%, 88% 70%, 50% 95%, 72% 91%;
     margin-top: 10px;
     padding: 25vh 0;
   }
