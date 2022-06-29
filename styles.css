@@ -157,7 +157,7 @@ header {
 
 .social-links a {
   margin: 0 10px;
-  color: #505F79;
+  color: #505f79;
   width: auto;
   font-size: 1.5rem;
 }
@@ -297,8 +297,6 @@ form input {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   background-color: white;
-  /* margin-top: 60px;
-  margin-bottom: 60px; */
   padding: 1rem;
 }
 
@@ -311,6 +309,10 @@ form input {
   flex-direction: row;
   list-style: none;
   padding-left: 0;
+}
+
+.container-technologies li {
+  border-bottom: 1px solid #dfe1e6;
 }
 
 .project-tags ul li {
@@ -379,11 +381,8 @@ form input {
   align-items: flex-start;
 }
 
-.container-technologies li:first-child{
-    border-bottom: none;
-    }
-.container-technologies li{
-border-bottom: 1px solid #DFE1E6;
+.container-technologies li:first-child {
+  border-bottom: none;
 }
 
 @media only screen and (max-width: 770px) {
@@ -520,7 +519,7 @@ border-bottom: 1px solid #DFE1E6;
     padding: 20px;
   }
 
-  .container-technologies{
+  .container-technologies {
     padding-left: 0;
   }
 
