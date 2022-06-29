@@ -56,13 +56,9 @@ header {
   padding: 40vh 0;
   border-bottom-left-radius: 80px;
   background-color: white;
-  background-image: url(./assets/Rectangle\ 6.png);
+  background-image: url("./assets/semi_moon.png"),url("./assets/rectangle_6.png");
   background-repeat: no-repeat;
-  background-position: absolute;
-  bottom: 9000px;
-  right: 500px;
-  left: 7900px;
-  top: 600px;
+  background-position:100px 70px, 50px 20px;
   margin-top: 50px;
   padding-left: 100px;
 }
