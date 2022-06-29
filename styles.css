@@ -477,8 +477,6 @@ border-bottom: 1px solid #DFE1E6;
     grid-template-columns: 1fr;
     gap: 2rem;
     background-color: white;
-    margin-top: 60px;
-    margin-bottom: 60px;
     padding: 1rem;
     border-radius: 20px;
   }
