@@ -584,7 +584,8 @@ form input {
     color: #396df2;
     border: 1px solid #396df2;
     border-radius: 6px;
-    width: 40%;
-    padding: 10px;
+    padding-left:3px ;
+    padding-right:3px;
+    
   }
 }
