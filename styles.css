@@ -193,6 +193,7 @@ header {
   background-color: white;
   border-top-right-radius: 80px;
   padding: 30px 0;
+  margin-top: 80px;
 }
 
 .social-media ul {
@@ -292,7 +293,7 @@ form {
 
 form input {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 1px;
 }
 
 .container-contact {
@@ -326,7 +327,7 @@ form input {
   grid-template-columns: 1fr;
   margin: 0 auto;
   row-gap: 8rem;
-  padding: 0 20px;
+  padding: 0 60px;
 }
 
 .work-item {
@@ -335,9 +336,7 @@ form input {
   gap: 2rem;
   background-color: white;
   padding: 1rem;
-
-  /* margin: 80px;
-  border-radius: 15px; */
+  border-radius: 8px;
 }
 
 .project-tags {
@@ -463,23 +462,19 @@ form input {
   }
 
   .introduction {
-    background-image:
-      url("./assets/semi_moon.png"),
-      url("./assets/rectangle_6.png"),
-      url("./assets/Rectangle\ 7.png"),
-      url("./assets/Ellipse_5.png"),
-      url("./assets/rectangle_4.png"),
-      url("./assets/ellipse_3.png"),
-      url("./assets/ellipse_13.png"),
-      url("./assets/Ellipse_12.png"),
-      url("./assets/rectangle_5.png"),
+    background-image: url("./assets/semi_moon.png"),
+      url("./assets/rectangle_6.png"), url("./assets/Rectangle\ 7.png"),
+      url("./assets/Ellipse_5.png"), url("./assets/rectangle_4.png"),
+      url("./assets/ellipse_3.png"), url("./assets/ellipse_13.png"),
+      url("./assets/Ellipse_12.png"), url("./assets/rectangle_5.png"),
       url("./assets/ellipse_4.png");
     background-repeat: no-repeat;
     background-size: auto, auto, auto, auto, 120px, 100px;
     margin-top: 10px;
     padding: 25vh 0;
     margin-bottom: 30px;
-    background-position: -40px 70px, -60px 20px, 110px 140px, 130px 155px, 270px 90px, 300px 140px, 86% 74%, 88% 70%, 50% 95%, 72% 91%;
+    background-position: -40px 70px, -60px 20px, 110px 140px, 130px 155px,
+      270px 90px, 300px 140px, 86% 74%, 88% 70%, 50% 95%, 72% 91%;
   }
 
   .greeting {
