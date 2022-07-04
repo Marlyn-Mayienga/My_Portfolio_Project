@@ -280,8 +280,8 @@ h4 {
 
 .contact-me {
   color: #fff;
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: 900;
+  font-size: 30px;
 }
 
 form {
@@ -321,6 +321,11 @@ form input {
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
+}
+
+.submit:active {
+  background-color: #2230d2;
+  color: #fff;
 }
 
 .works {
@@ -573,17 +578,14 @@ form input {
     background-image: url("./assets/contact\ form\ shapes-mobile@2x.png");
     background-size: 100%;
     background-repeat: no-repeat;
-<<<<<<< Updated upstream
     padding: 5px;
-=======
     padding: 30px;
->>>>>>> Stashed changes
   }
 
   .contact-me {
     color: #fff;
-    font-weight: 700;
-    font-size: 25px;
+    font-weight: 900;
+    font-size: 30px;
     padding-top: 150px;
   }
 
