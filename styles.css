@@ -431,6 +431,10 @@ form input {
   border-bottom: none;
 }
 
+.solid{
+  display: none;
+}
+
 @media only screen and (max-width: 770px) {
   body {
     padding: 0;
@@ -534,8 +538,15 @@ form input {
     width: 90% !important;
   }
 
+  .solid {
+    display: block;
+    border: 2px solid #0D151E;
+    width: 50%;
+    border-radius: 4px;
+  }
+
   .container-contact {
-    width: 100%;
+    width: 70%;
   }
 
   .about-myself .row {
@@ -558,9 +569,7 @@ form input {
     background-image: url("./assets/contact\ form\ shapes-mobile@2x.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    padding: 30px;
-
-    /* width: 90%; */
+    padding: 5px;
   }
 
   .contact-me {
@@ -571,7 +580,6 @@ form input {
   }
 
   .contact-detail {
-    /* padding: 40px; */
     margin: 0 10px;
   }
 
