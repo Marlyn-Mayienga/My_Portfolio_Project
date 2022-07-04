@@ -280,8 +280,8 @@ h4 {
 
 .contact-me {
   color: #fff;
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: 900;
+  font-size: 30px;
 }
 
 form {
@@ -321,6 +321,12 @@ form input {
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
+}
+
+.submit:active {
+  background-color: #2230d2;
+  color: #fff;
+
 }
 
 .works {
@@ -433,6 +439,10 @@ form input {
 
 .container-technologies li:first-child {
   border-bottom: none;
+}
+
+.solid {
+  display: none;
 }
 
 @media only screen and (max-width: 770px) {
@@ -548,8 +558,15 @@ form input {
     width: 90% !important;
   }
 
+  .solid {
+    display: block;
+    border: 2px solid #0d151e;
+    width: 50%;
+    border-radius: 4px;
+  }
+
   .container-contact {
-    width: 100%;
+    width: 70%;
   }
 
   .about-myself .row {
@@ -579,13 +596,12 @@ form input {
 
   .contact-me {
     color: #fff;
-    font-weight: 700;
-    font-size: 25px;
+    font-weight: 900;
+    font-size: 30px;
     padding-top: 150px;
   }
 
   .contact-detail {
-    /* padding: 40px; */
     margin: 0 10px;
   }
 

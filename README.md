@@ -11,10 +11,12 @@
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
+1. Get a local copy of the project through this link: https://github.com/Marlyn-Mayienga/My_Portfolio_Project.git
 
 ### Prerequisites
 
-You need to have a code editor to be able to run the commands in the terminal. VSCode is most preferred.
+You need to have a code editor to be able to run the commands in the terminal. 
+For this project, VSCode is most preferred.
 
 ### Setup
 
