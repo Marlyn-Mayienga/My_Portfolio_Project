@@ -431,7 +431,7 @@ form input {
   border-bottom: none;
 }
 
-.solid{
+.solid {
   display: none;
 }
 
@@ -540,7 +540,7 @@ form input {
 
   .solid {
     display: block;
-    border: 2px solid #0D151E;
+    border: 2px solid #0d151e;
     width: 50%;
     border-radius: 4px;
   }
