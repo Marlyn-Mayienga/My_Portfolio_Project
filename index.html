@@ -48,7 +48,7 @@
           <i class="fas fa-bars"></i>
         </div>
       </header>
-      <section class="introduction">
+      <section class="introduction"> 
         <div class="container">
           <h1 class="greeting">
             I’m Merlin <br />
@@ -91,7 +91,7 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> 
       <section class="works">
         <div class="work-item">
           <div>
@@ -336,12 +336,13 @@
             that you need built or a project that needs coding. I’d love to help
             with it
           </p>
-          <form>
+          <form action="https://formspree.io/f/mbjwvlpl" method="post">
             <input
               type="text"
               id="fullname"
               name="fullname"
               placeholder="Enter Full Name"
+              maxlength="30"
               required
             />
             <input
@@ -358,13 +359,16 @@
               placeholder="Write your message here"
               rows="10"
               cols="50"
+              minlength="1"
+              maxlength="500"
               required
             ></textarea>
     
             <button class="submit">Get In Touch</button>
           </form>
+          <hr class="solid">
         </div>
-      </section>
+      </section> 
     </main>
   </body>
 </html>
