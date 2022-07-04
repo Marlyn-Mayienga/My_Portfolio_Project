@@ -573,7 +573,11 @@ form input {
     background-image: url("./assets/contact\ form\ shapes-mobile@2x.png");
     background-size: 100%;
     background-repeat: no-repeat;
+<<<<<<< Updated upstream
     padding: 5px;
+=======
+    padding: 30px;
+>>>>>>> Stashed changes
   }
 
   .contact-me {
