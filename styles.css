@@ -31,6 +31,7 @@ header {
   list-style: none;
   flex: 0.3;
   color: white;
+  z-index: -2;
 }
 
 .nav-bar ul {
@@ -53,7 +54,7 @@ header {
 }
 
 .introduction {
-  padding: 40vh 0;
+  padding: 30vh 0;
   border-bottom-left-radius: 80px;
   background-color: white;
   background-image: url("./assets/Header\ bg@2x.png");
@@ -65,9 +66,8 @@ header {
 }
 
 .logo-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 15px;
   letter-spacing: 0;
   text-align: center;
   color: #6070ff;
@@ -92,59 +92,9 @@ header {
 
 .first-paragraph {
   color: #344563;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   font-style: regular;
-}
-
-.first-ellipse {
-  background-image: url("./assets/ellipse_11.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 40px;
-  top: 110px;
-  width: 100px;
-  height: 100px;
-}
-
-.first_img {
-  background-image: url("./assets/first_img1.png");
-  position: absolute;
-  background-repeat: no-repeat;
-  top: 100px;
-  right: 0;
-  width: 100px;
-  height: 100px;
-}
-
-.second_img {
-  background-image: url("./assets/img_twp.png");
-  position: absolute;
-  background-repeat: no-repeat;
-  top: 100px;
-  right: 600px;
-  width: 100px;
-  height: 100px;
-}
-
-.img_three {
-  background-image: url("./assets/img_three.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 550px;
-  left: 150px;
-  width: 100px;
-  height: 100px;
-}
-
-.img_four {
-  background-image: url("./assets/img_four.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 400px;
-  top: 550px;
-  width: 200px;
-  height: 200px;
 }
 
 .about-myself .row {
@@ -154,7 +104,7 @@ header {
 
 .connect {
   font-style: medium;
-  font-size: 12px;
+  font-size: 20px;
   color: #7f8cff;
 }
 
@@ -207,7 +157,7 @@ header {
 
 .social-media a {
   margin: 0 10px;
-  color: black;
+  color: #505f79;
   width: auto;
 }
 
@@ -280,8 +230,8 @@ h4 {
 
 .contact-me {
   color: #fff;
-  font-weight: 900;
-  font-size: 30px;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 form {
@@ -310,9 +260,9 @@ form input {
   color: #396df2;
   border: 1px solid #396df2;
   border-radius: 6px;
-  width: 40%;
-  padding: 10px;
-  margin-left: 100px;
+  width: 50%;
+  padding: 5px;
+  margin-left: 90px;
   background-color: #fff;
 }
 
@@ -321,11 +271,6 @@ form input {
   color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
-}
-
-.submit:active {
-  background-color: #2230d2;
-  color: #fff;
 }
 
 .works {
@@ -440,10 +385,6 @@ form input {
   border-bottom: none;
 }
 
-.solid {
-  display: none;
-}
-
 @media only screen and (max-width: 770px) {
   body {
     padding: 0;
@@ -458,6 +399,10 @@ form input {
 
   .container-nav {
     margin: 0;
+  }
+
+  .navbar {
+    float: none;
   }
 
   .hamburger-btn {
@@ -509,17 +454,6 @@ form input {
     margin-top: 30px;
   }
 
-  .ellipse_cut {
-    background-image: url("./assets/ellipse_cut3.png");
-    display: block;
-    background-repeat: no-repeat;
-    left: -15px;
-    position: absolute;
-    top: 70px;
-    width: 100px;
-    height: 100px;
-  }
-
   .images {
     width: 100%;
   }
@@ -557,15 +491,8 @@ form input {
     width: 90% !important;
   }
 
-  .solid {
-    display: block;
-    border: 2px solid #0d151e;
-    width: 50%;
-    border-radius: 4px;
-  }
-
   .container-contact {
-    width: 70%;
+    width: 100%;
   }
 
   .about-myself .row {
@@ -589,14 +516,12 @@ form input {
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 30px;
-
-    /* width: 90%; */
   }
 
   .contact-me {
     color: #fff;
-    font-weight: 900;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 25px;
     padding-top: 150px;
   }
 
