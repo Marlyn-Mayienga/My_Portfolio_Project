@@ -85,8 +85,8 @@ header {
   text-decoration: none;
 }
 
-.logo-title:hover{
-  background-color: #FFCCCC;
+.logo-title:hover {
+  background-color: #fcc;
   transform: rotate(180deg);
 }
 
