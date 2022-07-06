@@ -5,6 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden !important;
 }
 
 header {
@@ -60,7 +61,15 @@ header {
   background-image: url("./assets/Header\ bg@2x.png");
   background-size: 95%;
   background-repeat: no-repeat;
-  background-position: 100px 70px, 50px 20px, 30% 90%, 50% 50%, 91% 90%, 93% 98%, 90% 90%, 80% 85%,;
+  background-position:
+    100px 70px,
+    50px 20px,
+    30% 90%,
+    50% 50%,
+    91% 90%,
+    93% 98%,
+    90% 90%,
+    80% 85%;
   padding-left: 100px;
   margin-bottom: 50px;
 }
@@ -278,16 +287,16 @@ form input {
   grid-template-columns: 1fr;
   margin: 0 auto;
   row-gap: 8rem;
-  padding: 0 60px;
+  width: 80%;
 }
 
 .work-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 2rem;
   background-color: white;
   padding: 1rem;
   border-radius: 6px;
+  width: 100%;
 }
 
 .work-item:first-child {
@@ -385,6 +394,15 @@ form input {
   border-bottom: none;
 }
 
+.project-img {
+  width: 50%;
+  flex: 0 0 50%;
+}
+
+.project-img img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 770px) {
   body {
     padding: 0;
@@ -395,6 +413,7 @@ form input {
   .header {
     margin: 0 auto;
     max-width: 448px;
+    width: 100%;
   }
 
   .container-nav {
@@ -455,7 +474,7 @@ form input {
   }
 
   .images {
-    width: 100%;
+    width: 50%;
   }
 
   .ruby {
@@ -471,10 +490,15 @@ form input {
   .work-item {
     display: grid;
     grid-template-columns: 1fr;
+    flex-direction: row;
     gap: 2rem;
     background-color: white;
     padding: 1rem;
     border-radius: 20px;
+  }
+
+  .project-img {
+    width: 100%;
   }
 
   .work-item:nth-child(even) .work-item-detail {
