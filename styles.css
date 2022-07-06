@@ -85,6 +85,11 @@ header {
   text-decoration: none;
 }
 
+.logo-title:hover{
+  background-color: #FFCCCC;
+  transform: rotate(180deg);
+}
+
 .greeting {
   color: #091e42;
   font-style: bold;
@@ -104,6 +109,20 @@ header {
   font-size: 20px;
   font-weight: 400;
   font-style: regular;
+  animation-name: slidein;
+  animation-duration: 5s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .about-myself .row {
