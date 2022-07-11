@@ -47,7 +47,7 @@ Install the fontawesome for icons in the project (Preferrable)
 ### Run tests
 
 ### Deployment
-
+This website can be viewed at: https://marlyn-mayienga.github.io/My_Portfolio_Project/
 ## Authors
 
 👤 **Marlyn Mayienga**
