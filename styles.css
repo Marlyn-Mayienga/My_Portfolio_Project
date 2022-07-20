@@ -454,6 +454,51 @@ form input {
     align-items: left;
   }
 
+  .closeIcon{
+    display: none;
+    width: 12px;
+    height: 12px;
+    size: 30;
+    margin: 15px;
+    margin-bottom: 50px;
+  }
+
+
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: #191765;
+    color: white;
+    list-style: none;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .menuItem {
+    font-style: medium;
+    font-size: 24px;
+    color: #edecff;
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  .showMenu {
+    transform: translateY(0);
+  }
+
   .nav-bar ul {
     display: none;
   }
