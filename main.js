@@ -22,20 +22,19 @@ const form = document.getElementById('form');
 
 // Check if String has Uppercase
 function checkUppercase(str) {
-    for (var i = 0; i < str.length; i++) {
-      if (
-        str.charAt(i) != str.charAt(i).toUpperCase() &&
-        !str.charAt(i).match(/[a-z]/i)
-      ) {
-        return false;
-      }
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str.charAt(i) !== str.charAt(i).toUpperCase()
+        && !str.charAt(i).match(/[a-z]/i)
+    ) {
+      return false;
     }
-    return true;
   }
-  return false;
+  return true;
 }
+return false;
 
-form.addEventListener("submit", handleSubmit);
+// form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
   console.log('Form Submitted');
