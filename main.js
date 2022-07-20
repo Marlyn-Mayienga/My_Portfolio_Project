@@ -1,5 +1,4 @@
 const menu = document.querySelector('.menu');
-const menuItems = document.querySelectorAll('.menuItem');
 const hamburger = document.querySelector('.hamburger-btn');
 const closeIcon = document.querySelector('.closeIcon');
 const menuIcon = document.querySelector('.menuIcon');
@@ -23,17 +22,20 @@ const form = document.getElementById('form');
 
 // Check if String has Uppercase
 function checkUppercase(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (
-      str.charAt(i) == str.charAt(i).toUpperCase()
-      && str.charAt(i).match(/[a-z]/i)
-    ) {
-      return true;
+    for (var i = 0; i < str.length; i++) {
+      if (
+        str.charAt(i) != str.charAt(i).toUpperCase() &&
+        !str.charAt(i).match(/[a-z]/i)
+      ) {
+        return false;
+      }
     }
+    return true;
   }
   return false;
 }
-form.addEventListener('submit', handleSubmit);
+
+form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e) {
   console.log('Form Submitted');
