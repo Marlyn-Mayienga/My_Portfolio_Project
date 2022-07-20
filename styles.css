@@ -460,7 +460,8 @@ form input {
     font-style: normal;
     font-weight: 600;
   }
-  .closeIcon{
+
+  .closeIcon {
     display: none;
     color: white;
     width: 12px;
@@ -471,9 +472,9 @@ form input {
     margin-bottom: 50px;
   }
 
-.logo-title{
-  display: none;
-}
+  .logo-title {
+    display: none;
+  }
 
   .menu {
     position: fixed;
@@ -483,7 +484,7 @@ form input {
     right: 0;
     bottom: 0;
     z-index: 99;
-    background: #6070FF;
+    background: #6070ff;
     color: white;
     list-style: none;
     width: 100%;
@@ -494,7 +495,7 @@ form input {
     flex-direction: column;
     overflow-x: hidden;
     backdrop-filter: blur(12px);
-    opacity:0.9;
+    opacity: 0.9;
   }
 
   .menuItem {
