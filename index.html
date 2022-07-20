@@ -339,10 +339,10 @@
             that you need built or a project that needs coding. I’d love to help
             with it
           </p>
-          <form action="https://formspree.io/f/mbjwvlpl" method="post">
+          <form action="https://formspree.io/f/mbjwvlpl" method="post" id="form">
             <input
               type="text"
-              id="fullname"
+              id="username"
               name="fullname"
               placeholder="Enter Full Name"
               maxlength="30"
@@ -355,7 +355,7 @@
               placeholder="Email Address"
               required
             />
-    
+            <div class="error" id="error">Email should be in lowercase</div>
             <textarea
               id="msg"
               name="user_message"
@@ -367,7 +367,8 @@
               required
             ></textarea>
     
-            <button class="submit">Get In Touch</button>
+            <button class="submit" id="submit">Get In Touch</button>
+            
           </form>
           <hr class="solid">
         </div>
