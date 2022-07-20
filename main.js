@@ -36,7 +36,6 @@ function checkUppercase(str) {
 form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e){
-  // e.preventDefault()
   console.log("Form Submitted");
 
   const username = document.getElementById("username");
@@ -85,34 +84,32 @@ function handleSubmit(e){
   }else{
     errorMessage.classList.remove("show");
   }
-  // document.getElementById("form").submit()
+ 
 }
 
 //Local storage//
+//This is the section for data binding//
 
-function storeData() {
-    const formData = {
-      username: username.value,
-      email: email.value,
-      message: message.value,
-    };
-  
-    localStorage.setItem('formData', JSON.stringify(formData));
+const form2 = document.querySelector('#form');
+
+form2.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const obj = {
+    fullname: document.querySelector('#username').value,
+    EmailAdress: document.querySelector('#email').value,
+    message: document.querySelector('#msg').value,
+  };
+
+  localStorage.setItem('DATA', JSON.stringify(obj));
+});
+
+const getData = localStorage.getItem('DATA');
+const getDataValue = JSON.parse(getData);
+
+window.addEventListener('load', () => {
+  if (localStorage.getItem('DATA')) {
+    document.querySelector('#username').value = getDataValue.fullname;
+    document.querySelector('#email').value = getDataValue.EmailAdress;
+    document.querySelector('#msg').value = getDataValue.message;
   }
-  
-  function getData() {
-    if (!localStorage.getItem('formData')) {
-      storeData();
-    }
-  
-    const localData = JSON.parse(localStorage.getItem('formData'));
-    username.setAttribute('value', localData.username);
-    email.setAttribute('value', localData.email);
-    message.textContent = localData.message;
-  }
-  
-  getData();
-  
-  username.addEventListener('change', storeData);
-  email.addEventListener('change', storeData);
-  message.addEventListener('change', storeData);
+});
