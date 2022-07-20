@@ -1,38 +1,38 @@
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger = document.querySelector(".hamburger-btn");
-const closeIcon = document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
+const menu = document.querySelector('.menu');
+// const menuItems = document.querySelectorAll('.menuItem');
+const hamburger = document.querySelector('.hamburger-btn');
+const closeIcon = document.querySelector('.closeIcon');
+const menuIcon = document.querySelector('.menuIcon');
 
 function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
+  if (menu.classList.contains('showMenu')) {
+    menu.classList.remove('showMenu');
+    closeIcon.style.display = 'none';
+    menuIcon.style.display = 'block';
   } else {
-    menu.classList.add("showMenu");
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
+    menu.classList.add('showMenu');
+    closeIcon.style.display = 'block';
+    menuIcon.style.display = 'none';
   }
 }
-menu.addEventListener("click", toggleMenu);
-hamburger.addEventListener("click", toggleMenu);
+menu.addEventListener('click', toggleMenu);
+hamburger.addEventListener('click', toggleMenu);
 
 //Form-validation//
 const form = document.getElementById("form");
 
 // Check if String has Uppercase
 function checkUppercase(str) {
-  for (var i = 0; i < str.length; i++) {
-    if (
-      str.charAt(i) == str.charAt(i).toUpperCase() &&
-      str.charAt(i).match(/[a-z]/i)
-    ) {
-      return true;
+    for (var i = 0; i < str.length; i++) {
+      if (
+        str.charAt(i) != str.charAt(i).toUpperCase() &&
+        !str.charAt(i).match(/[a-z]/i)
+      ) {
+        return false;
+      }
     }
+    return true;
   }
-  return false;
-}
 form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(e) {

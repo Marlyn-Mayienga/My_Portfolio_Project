@@ -462,7 +462,6 @@ form input {
   }
 
   .hamburger-btn {
-    color: #6070ff;
     display: block;
     font-size: 1em;
     z-index: 1;
@@ -470,6 +469,14 @@ form input {
     right: 30px;
     top: 20px;
     align-items: left;
+  }
+
+  .nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
   }
 
   .closeIcon {
@@ -518,6 +525,17 @@ form input {
 
   .nav-bar ul {
     display: none;
+    color: white;
+    width: 12px;
+    font-size: 2rem;
+    height: 12px;
+    size: 30;
+    margin: 15px;
+    margin-bottom: 50px;
+  }
+
+  .logo-title {
+    display: block;
   }
 
   .introduction {
