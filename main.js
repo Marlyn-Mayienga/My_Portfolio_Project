@@ -18,48 +18,113 @@ function toggleMenu() {
 menu.addEventListener("click", toggleMenu);
 hamburger.addEventListener("click", toggleMenu);
 
+//Form-validation//
+const form = document.getElementById("form");
 
-//Form-validation
-const form = document.querySelector('#form');
-const username = document.querySelector('#user-name');
-const email = document.querySelector('#user-email');
-const errorMessage = document.querySelector('#error-message');
-const message = document.querySelector('#msg');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  if (username.value === '') {
-    errorMessage.textContent = 'Name cannot be blank';
-    username.classList.add('invalid');
-    return;
+// Check if String has Uppercase
+function checkUppercase(str) {
+  for (var i = 0; i < str.length; i++) {
+    if (
+      str.charAt(i) == str.charAt(i).toUpperCase() &&
+      str.charAt(i).match(/[a-z]/i)
+    ) {
+      return true;
+    }
   }
-  username.classList.remove('invalid');
-  username.classList.add('valid');
+  return false;
+}
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(e){
+  // e.preventDefault()
+  console.log("Form Submitted");
+
+  const username = document.getElementById("username");
+  const email = document.getElementById("email");
+  const errorMessage = document.getElementById("error");
+  const message = document.getElementById("msg");
+
+  if (username.value === "") {
+    errorMessage.textContent = "Name cannot be blank";
+    errorMessage.classList.add("show");
+    e.preventDefault()
+    return;
+    
+  }else{
+    errorMessage.classList.remove("show");
+  }
 
   if (username.value.length < 3 || username.value.length > 20) {
-    errorMessage.textContent = 'Name must have between 3 to 20 characters';
-    username.classList.add('invalid');
+    errorMessage.textContent = "Name must have between 3 to 20 characters";
+    errorMessage.classList.add("show");
+    e.preventDefault()
     return;
-  }
-  username.classList.remove('invalid');
-  username.classList.add('valid');
 
-  if (email.value !== email.value.toLowerCase() || email.value === '') {
-    errorMessage.textContent = 'Most enter a valid email in lower case';
-    email.classList.add('invalid');
+  }else{
+    errorMessage.classList.remove("show");
+  }
+
+  if (checkUppercase(email.value)) {
+    errorMessage.textContent = "Most enter a valid email in lower case";
+    errorMessage.classList.add("show");
+    e.preventDefault()
     return;
-  }
-  email.classList.remove('invalid');
-  email.classList.add('valid');
 
-  if (message.value.length > 1000 || message.value === '') {
-    errorMessage.textContent = 'Most write a message of less than 1000 characters';
-    message.classList.add('invalid');
+  }else{
+     errorMessage.classList.remove("show");
+  }
+
+
+  if (message.value.length > 1000 || message.value === "") {
+    errorMessage.textContent =
+      "Most write a message of less than 1000 characters";
+    errorMessage.classList.add("show");
+    e.preventDefault()
     return;
-  }
-  message.classList.remove('invalid');
-  message.classList.add('valid');
 
-  form.submit();
-});
+  }else{
+    errorMessage.classList.remove("show");
+  }
+  // document.getElementById("form").submit()
+}
+
+
+
+
+
+
+/**
+ Variables to store form elements
+ */
+// const submitButton = document.getElementById("msg");
+// submitButton.addEventListener("change", formSubmit);
+
+// function formSubmit(event) {
+//   const userName = document.getElementById("fullname").value;
+//   const email = document.getElementById("email").value;
+//   const message = document.getElementById("msg").value;
+//   event.preventDefault();
+//   if (email !== email.toLowerCase()) {
+//     document.getElementById("error").classList.add("show");
+//   } else {
+//     const userData = JSON.stringify({
+//       userName: userName,
+//       email: email,
+//       message: message,
+//     });
+//     window.localStorage.setItem("userData", userData);
+//   }
+// }
+// window.onload = function () {
+//   readLocalStorage();
+// };
+/**Binding */
+
+// function readLocalStorage() {
+//   if (window.localStorage.getItem("userData")) {
+//     const userData = JSON.parse(window.localStorage.getItem("userData"));
+//     document.getElementById("fullname").value = userData.userName;
+//     document.getElementById("email").value = userData.email;
+//     document.getElementById("msg").value = userData.message;
+//   }
+// }

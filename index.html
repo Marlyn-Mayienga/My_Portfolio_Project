@@ -331,7 +331,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contact">
         <div class="container-contact">
           <h3 class="contact-me">Contact me</h3>
           <p class="contact-detail">
@@ -339,10 +339,10 @@
             that you need built or a project that needs coding. I’d love to help
             with it
           </p>
-          <form action="https://formspree.io/f/mbjwvlpl" method="post">
+          <form action="https://formspree.io/f/mbjwvlpl" method="post" id="form">
             <input
               type="text"
-              id="fullname"
+              id="username"
               name="fullname"
               placeholder="Enter Full Name"
               maxlength="30"
@@ -355,7 +355,7 @@
               placeholder="Email Address"
               required
             />
-    
+            <div class="error" id="error">Email should be in lowercase</div>
             <textarea
               id="msg"
               name="user_message"
@@ -367,12 +367,19 @@
               required
             ></textarea>
     
-            <button class="submit">Get In Touch</button>
+            <button class="submit" id="submit">Get In Touch</button>
+            
           </form>
           <hr class="solid">
         </div>
       </section> 
     </main>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./main.js"></script>
   </body>
 </html>
 
