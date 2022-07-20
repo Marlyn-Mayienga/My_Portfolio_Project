@@ -473,7 +473,7 @@ form input {
   }
 
   .logo-title {
-    display: none;
+    display: block;
   }
 
   .menu {
@@ -483,7 +483,7 @@ form input {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    z-index: 1;
     background: #6070ff;
     color: white;
     list-style: none;
@@ -494,7 +494,7 @@ form input {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     opacity: 0.9;
   }
 
