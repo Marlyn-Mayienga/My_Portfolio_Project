@@ -472,7 +472,7 @@ form input {
     align-items: left;
   }
 
-  .closeIcon{
+  .closeIcon {
     display: none;
     width: 12px;
     height: 12px;
@@ -480,7 +480,6 @@ form input {
     margin: 15px;
     margin-bottom: 50px;
   }
-
 
   .menu {
     position: fixed;
