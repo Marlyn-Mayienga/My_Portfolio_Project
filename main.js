@@ -36,8 +36,6 @@ function handleSubmit(e) {
     errorMessage.classList.add('show');
     e.preventDefault();
     return false;
-
-
   }
   errorMessage.classList.remove('show');
 
@@ -86,18 +84,3 @@ window.addEventListener('load', () => {
     document.querySelector('#msg').value = getDataValue.message;
   }
 });
-    return;
-  }
-  errorMessage.classList.remove('show');
-
-  if (message.value.length > 1000 || message.value === '') {
-    errorMessage.textContent = 'Most write a message of less than 1000 characters';
-    errorMessage.classList.add('show');
-    e.preventDefault();
-  } else {
-    errorMessage.classList.remove('show');
-  }
-  // document.getElementById("form").submit()
-}
-form.addEventListener('submit', handleSubmit);
-
