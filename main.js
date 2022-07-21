@@ -32,7 +32,6 @@ function checkUppercase(str) {
   return true;
 }
 
-
 function handleSubmit(e) {
   e.preventDefault();
   const username = document.getElementById('username');
