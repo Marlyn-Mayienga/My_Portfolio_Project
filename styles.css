@@ -491,13 +491,12 @@ form input {
   .menu {
     position: fixed;
     transform: translateY(-100%);
-    transition: transform 0.2s;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
-    background: #191765;
+    z-index: 1;
+    background: #6070ff;
     color: white;
     list-style: none;
     width: 100%;
@@ -507,6 +506,8 @@ form input {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    backdrop-filter: blur(10px);
+    opacity: 0.9;
   }
 
   .menuItem {
@@ -524,16 +525,9 @@ form input {
   }
 
   .nav-bar ul {
-    display: none;
-    color: white;
-    width: 12px;
-    font-size: 2rem;
-    height: 12px;
-    size: 30;
-    margin: 15px;
-    margin-bottom: 50px;
+    display: block;
   }
-
+  
   .logo-title {
     display: block;
   }
