@@ -395,6 +395,7 @@ form input {
   padding: 10px 20px;
   margin-top: 20px;
   background-color: white;
+  text-decoration: none;
 }
 
 .see-project:hover {

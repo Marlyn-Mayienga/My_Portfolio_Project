@@ -3,6 +3,7 @@ const menu = document.querySelector('.menu');
 const hamburger = document.querySelector('.hamburger-btn');
 const closeIcon = document.querySelector('.closeIcon');
 const menuIcon = document.querySelector('.menuIcon');
+const modal = document.querySelector('#modal');
 
 function toggleMenu() {
   if (menu.classList.contains('showMenu')) {
@@ -18,235 +19,154 @@ function toggleMenu() {
 menu.addEventListener('click', toggleMenu);
 hamburger.addEventListener('click', toggleMenu);
 
-//Form-validation//
-const form = document.getElementById("form");
+// Form-validation//
+const form = document.getElementById('form');
 
 // Check if String has Uppercase
 function checkUppercase(str) {
-    for (var i = 0; i < str.length; i++) {
-      if (
-        str.charAt(i) != str.charAt(i).toUpperCase() &&
-        !str.charAt(i).match(/[a-z]/i)
-      ) {
-        return false;
-      }
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str.charAt(i) != str.charAt(i).toUpperCase()
+        && !str.charAt(i).match(/[a-z]/i)
+    ) {
+      return false;
     }
-    return true;
   }
-form.addEventListener("submit", handleSubmit);
+  return true;
+}
+form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(e) {
-  console.log("Form Submitted");
+  console.log('Form Submitted');
 
-  const username = document.getElementById("username");
-  const email = document.getElementById("email");
-  const errorMessage = document.getElementById("error");
-  const message = document.getElementById("msg");
+  const username = document.getElementById('username');
+  const email = document.getElementById('email');
+  const errorMessage = document.getElementById('error');
+  const message = document.getElementById('msg');
 
-  if (username.value === "") {
-    errorMessage.textContent = "Name cannot be blank";
-    errorMessage.classList.add("show");
+  if (username.value === '') {
+    errorMessage.textContent = 'Name cannot be blank';
+    errorMessage.classList.add('show');
     e.preventDefault();
     return;
-  } else {
-    errorMessage.classList.remove("show");
   }
+  errorMessage.classList.remove('show');
 
   if (username.value.length < 3 || username.value.length > 20) {
-    errorMessage.textContent = "Name must have between 3 to 20 characters";
-    errorMessage.classList.add("show");
+    errorMessage.textContent = 'Name must have between 3 to 20 characters';
+    errorMessage.classList.add('show');
     e.preventDefault();
     return;
-  } else {
-    errorMessage.classList.remove("show");
   }
+  errorMessage.classList.remove('show');
 
   if (checkUppercase(email.value)) {
-    errorMessage.textContent = "Most enter a valid email in lower case";
-    errorMessage.classList.add("show");
+    errorMessage.textContent = 'Most enter a valid email in lower case';
+    errorMessage.classList.add('show');
     e.preventDefault();
     return;
-  } else {
-    errorMessage.classList.remove("show");
   }
+  errorMessage.classList.remove('show');
 
-  if (message.value.length > 1000 || message.value === "") {
-    errorMessage.textContent =
-      "Most write a message of less than 1000 characters";
-    errorMessage.classList.add("show");
+  if (message.value.length > 1000 || message.value === '') {
+    errorMessage.textContent = 'Most write a message of less than 1000 characters';
+    errorMessage.classList.add('show');
     e.preventDefault();
-    return;
   } else {
-    errorMessage.classList.remove("show");
+    errorMessage.classList.remove('show');
   }
 }
 
-//Local storage//
-//This is the section for data binding//
+// Local storage//
+// This is the section for data binding//
 
-const form2 = document.querySelector("#form");
+const form2 = document.querySelector('#form');
 
-form2.addEventListener("submit", (e) => {
+form2.addEventListener('submit', (e) => {
   e.preventDefault();
   const obj = {
-    fullname: document.querySelector("#username").value,
-    EmailAdress: document.querySelector("#email").value,
-    message: document.querySelector("#msg").value,
+    fullname: document.querySelector('#username').value,
+    EmailAdress: document.querySelector('#email').value,
+    message: document.querySelector('#msg').value,
   };
 
-  localStorage.setItem("DATA", JSON.stringify(obj));
+  localStorage.setItem('DATA', JSON.stringify(obj));
 });
 
-const getData = localStorage.getItem("DATA");
+const getData = localStorage.getItem('DATA');
 const getDataValue = JSON.parse(getData);
 
-window.addEventListener("load", () => {
-  if (localStorage.getItem("DATA")) {
-    document.querySelector("#username").value = getDataValue.fullname;
-    document.querySelector("#email").value = getDataValue.EmailAdress;
-    document.querySelector("#msg").value = getDataValue.message;
+window.addEventListener('load', () => {
+  if (localStorage.getItem('DATA')) {
+    document.querySelector('#username').value = getDataValue.fullname;
+    document.querySelector('#email').value = getDataValue.EmailAdress;
+    document.querySelector('#msg').value = getDataValue.message;
   }
 });
 
-//Popup Window//
-const array = [
+// Popup Window//
+// projects object//
+const projects = [
   {
-    id: "1",
-    name: "PWW 2022",
-    shortDescription:
-      "This web app shares information about Pakistan Watch Week 2022.",
-    longDescription:
-      "This website project serves the objective of notifying people about a forthcoming Watch Week 2022, complete with an about page that provides further information.",
-    featured: ["Front End Dev", "Responsive", 2021],
-    image: "images/watch_mobile.gif",
-    imageDesktop: "images/watch_desktop.gif",
-    technologies: ["html", "css", "javascript"],
-    live_version: "https://hammas-saleem.github.io/Pakistan-Watch-Week-2022/",
-    source_link: "https://github.com/HAMMAS-SALEEM/Pakistan-Watch-Week-2022",
+    projectTitle: 'Project #0',
+    description: 'project#0 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './assets/project_img1.png',
+    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
   },
   {
-    id: "2",
-    name: "ToDoList",
-    shortDescription:
-      "A convenient way to keep track of their daily routine works.",
-    longDescription:
-      "A simple to-do app for managing daily tasks built with Webpack, JavaScript, HTML, and CSS. With the functionality to manipulate multiple completed tasks and store them to local storage.",
-    featured: ["Interactive", "Local Storage", 2021],
-    image: "images/todolist-mobile.GIF",
-    imageDesktop: "images/todolist-desktop.GIF",
-    technologies: ["html", "css", "javascript"],
-    live_version: "https://hammas-saleem.github.io/ToDoList/",
-    source_link: "https://github.com/HAMMAS-SALEEM/ToDoList",
+    projectTitle: 'Project #1',
+    description: 'project#1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './images/project_2.png',
+    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
   },
-
   {
-    id: "3",
-    name: "Space Traveler Hub",
-    shortDescription:
-      "This is a rocket booking and mission joining application.",
-    longDescription: `This web app serves the facilities to reserve and rocket and joins a 
-                      mission. This application gets data from API and stores it into redux. 
-                      It has been built on React.js`,
-    featured: ["Interactive", "Front End Dev", 2022],
-    image: "images/space-traveler.png",
-    imageDesktop: "images/space-traveler.png",
-    technologies: ["ReactJS", "Redux", "Jest"],
-    live_version: "https://hammasspace.netlify.app/",
-    source_link: "https://github.com/HAMMAS-SALEEM/Space-Traveler-Hub",
+    projectTitle: 'Project #2',
+    description: 'project#2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './images/project_3.png',
+    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
   },
-
   {
-    id: "5",
-    name: "MyBudget",
-    shortDescription: "MyBudget is a budget manager application.",
-    longDescription:
-      '"MyBudget" is a budget manager web application that allows users to keep track of their budget with different categories.',
-    featured: ["Interactive", "Responsive", 2022],
-    image: "images/my_budget.png",
-    imageDesktop: "images/my_budget.png",
-    technologies: ["Ruby on Rails", "ReactJS", "PostgreSQL"],
-    live_version: "https://quiet-sierra-22121.herokuapp.com/",
-    source_link: "https://github.com/HAMMAS-SALEEM/MyBudget",
+    projectTitle: 'Project #3',
+    description: 'project#3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './images/project_4.png',
+    languages: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
   },
 ];
 
-const main = document.querySelector(".mobile_menu");
-const dynamicWork = document.querySelector(".works");
-const modelView = document.querySelector(".bg_model");
+// modal window
 
-function openMain() {
-  main.style.visibility = "visible";
-}
+function openModal(num = null) {
+  if (num != null) {
+    const { languages } = projects[num];
+    let languagesList = '';
+    languages.forEach((listedItem) => {
+      languagesList += `<li>${listedItem}</li>`;
+    });
 
-function closeMain() {
-  main.style.visibility = "hidden";
-}
+    document.getElementById('modal-project-name').innerHTML = projects[num].projectTitle;
+    document.getElementById('modal-languages').innerHTML = languagesList;
+    document.getElementById('modal-project-img').src = projects[num].mainImage;
+    // document.getElementById('modal-img-preview').innerHTML = imagesList;
+    document.getElementById('modal-project-live').href = projects[num].linkToLiveVersion;
+    document.getElementById('modal-project-source').href = projects[num].linkToSource;
 
-function closeModel() {
-  modelView.style.visibility = "hidden";
-}
-
-function openModel(id) {
-  modelView.style.visibility = "visible";
-  for (let i = 0; i < array.length; i += 1) {
-    if (id === array[i].id) {
-      modelView.innerHTML = `
-        <div class="model_content" id="modelcontent">
-        <div class="model_header">
-            <h2 class="project_title">${array[i].name}</h2>
-            <span onclick="closeModel()" class="crossBtn">&times;</span>
-        </div>
-        <ul class="info_list">
-            <li class="item1">${array[i].featured[0]}</li>
-            <li class="item2"><span class="dot">&bull;</span><span>${array[i].featured[1]}</span></li>
-            <li class="item2"><span class="dot">&bull;</span><span>${array[i].featured[2]}</span></li>
-        </ul>
-        <img class="img_project" src=${array[i].image} alt="project">
-        <img class="img_desktop" src=${array[i].imageDesktop} alt="project desktop screenshot">
-        <p class="project_description">${array[i].longDescription}</p>
-        <ul class="tech_list">
-            <li>${array[i].technologies[0]}</li>
-            <li class="margin_li">${array[i].technologies[1]}</li>
-            <li class="margin_li">${array[i].technologies[2]}</li>
-        </ul>
-        <img src="./images/border_line.png" alt="border line" class="button_line">
-        <div class="buttons">
-            <a class="model_btn live" href=${array[i].live_version}>See live<img class="_icon" src="./images/Icon.svg" alt="live icon"></a>
-            <a class="model_btn source" href=${array[i].source_link}>See project<img class="_icon" src="./images/Vector.svg" alt="github icon"></a>
-        </div>
-    </div>`;
-    }
+    modal.classList.add('active');
   }
 }
 
-openMain();
-closeMain();
-openModel();
-closeModel();
-for (let i = 0; i < array.length; i += 1) {
-  dynamicWork.innerHTML += `<div class="cr-grid">
-    <div id=${array[i].id} class="w1contain">
-        <img class="pti" src=${array[i].image} alt="Portfolio Title Image"/>
-        <img class="snap01 img13" src=${array[i].imageDesktop} alt="Portfolio"/>
-        <div class="for-fullscreen">
-            <header>
-                <h2 class="works-title">${array[i].name}</h2>
-            </header>
-            <ul class="specs w11contain">
-                <li class="spec1">${array[i].featured[0]}</li>
-                <li class="spec2">${array[i].featured[1]}</li>
-                <li class="spec2">${array[i].featured[2]}</li>
-            </ul>
-            <p class="w1par">${array[i].shortDescription}
-            </p>
-            <div class="bcontain">
-                <button type="button" class="w1btn" disabled>${array[i].technologies[0]}</button>
-                <button type="button" class="w1btn" disabled>${array[i].technologies[1]}</button>
-                <button type="button" class="w1btn" disabled>${array[i].technologies[2]}</button>
-            </div>
-            <button id=${array[i].id} onclick="openModel(this.id)" type="button" class="w1btn2"><a  href="#model">See Project</a></button>
-        </div>
-    </div>
-    </div>
-    `;
+function closeModal(id = null) {
+  if (id != null) {
+    modal.classList.remove('active');
+  }
 }
+
+openModal();
+closeModal();

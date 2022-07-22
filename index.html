@@ -92,17 +92,7 @@
             </ul>
           </div>
         </div>
-      </section> 
-      <!-- Model Window -->
-    <div class="bg_model" id="model">
-
-    </div>
-    <!-- Model Window -->
-
-    <!-- Work section -->
-    <section id="works" class="works"></section>
-    <!-- Work section -->
-      <section class="works">
+       </section> 
       <section class="works" id="portfolio">
         <div class="work-item ">
           <div class="project-img">
@@ -137,7 +127,7 @@
                 <li><button class="skill-button">Javascript</button></li>
               </ul>
             </div>
-            <button class="see-project">See Project</button>
+            <a href="javascript:openModal(0)"class="see-project">See Project</a>
           </div>
         </div>
         <div class="work-item">
@@ -168,7 +158,7 @@
                 <li><button class="skill-button">Javascript</button></li>
               </ul>
             </div>
-            <button class="see-project">See Project</button>
+            <a href="javascript:openModal(1)" class="see-project">See Project</a>
           </div>
           <div class="project-img">
             <img
@@ -217,7 +207,7 @@
                 <li><button class="skill-button">Javascript</button></li>
               </ul>
             </div>
-            <button class="see-project">See Project</button>
+            <a href="javascript:openModal(2)" class="see-project">See Project</a>
           </div>
         </div>
         <div class="work-item">
@@ -249,7 +239,7 @@
                 <li><button class="skill-button">Javascript</button></li>
               </ul>
             </div>
-            <button class="see-project">See Project</button>
+            <a href="javascript:openModal(3)" class="see-project">See Project</a>
           </div>
           <div class="project-img">
             <img
@@ -384,24 +374,72 @@
         </div>
       </section> 
     </main>
+    <div id="modal" class="overlay">
+      <div class="modal-header">
+        <div class="modal-project-headline">
+          <div class="work-item-detail">
+            <h5 class="project-headline" id="modal-project-name">FaceBook 360</h5>
+            <button onclick="closeModal(1)" class="close-button" type="button">
+              &times;
+            </button>
+            <div class="project-tags">
+              <div>
+                <ul id="modal-languages">
+                  <li>FACEBOOK</li>
+                  <li>
+                    <span><i class="fas fa-circle"></i></span> Full Stack Dev
+                    <span><i class="fas fa-circle"></i></span>
+                  </li>
+                  <li>2015</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-project-img" id="modal-project-img">
+            <img
+            class="modal-image"
+            src="./assets/project_img3.png"
+            alt="project_img1"
+          />
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+       <div>
+        <div>
+          <p class="project-description" id="modal-project-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque ipsa id quaerat veniam amet similique ex aliquid, modi dignissimos temporibus nemo odit corrupti, reprehenderit voluptatem magnam autem? Doloremque, magni
+          </p>
+        </div>
+        <div class="modal-body-technologies">
+          <div class="container-skill">
+            <ul>
+              <li><button class="skill-button">html</button></li>
+              <li>
+                <button class="skill-button ruby">Javascript</button>
+              </li>
+              <li>
+                <button class="skill-button">css</button>
+              </li>
+              <li><button class="skill-button">Github</button></li>
+              <li><button class="skill-button">ruby</button></li>
+              <li><button class="skill-button">Bootstrap</button></li>
+            </ul>
+          </div>
+          <button class="see-project" id="modal-project-live">See Live 
+            <img src="./assets/Icon.svg" alt="icon">
+          </button>
+          <button class="see-project" id="modal-project-source">See Project<i class="fab fa-github"></i></button>
+        </div>
+       </div>
+      </div>
+      </div>
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"
   ></script>
   <script src="./main.js"></script>
-  <div class="modal" id="modal">
-    <div class="modal_container" id="modal_container">
-        <span onclick="closeModal()" class="closeBtn">&times;</span>
-    </div>
-</div>
-<section id="works2" class="works2">
-</section>
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./main.js"></script>
   </body>
 </html>
 
