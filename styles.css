@@ -467,7 +467,7 @@ form input {
   backdrop-filter: blur(30px);
   backdrop-filter: brightness(60%);
   backdrop-filter: contrast(40%);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .overlay {
