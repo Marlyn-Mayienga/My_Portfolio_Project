@@ -127,7 +127,7 @@
                 <li><button class="skill-button">Javascript</button></li>
               </ul>
             </div>
-            <a href="javascript:openModal(0)"class="see-project">See Project</a>
+            <a href="javascript:openModal(0);" class="see-project">See Project</a>
           </div>
         </div>
         <div class="work-item">
@@ -374,20 +374,23 @@
         </div>
       </section> 
     </main>
-    <div id="modal" class="overlay">
+    <div id="modal" class="modal">
+      <div class="overlay"></div>
+      <div class="modal-content">
+
       <div class="modal-header">
         <div class="modal-project-headline">
           <div class="work-item-detail">
-            <h5 class="project-headline" id="modal-project-name">FaceBook 360</h5>
-            <button onclick="closeModal(1)" class="close-button" type="button">
+            <h5 class="project-headline modal-project-headline" id="modal-project-name">FaceBook 360</h5>
+            <a href="javascript:closeModal(1)" class="close-button">
               &times;
-            </button>
+            </a>
             <div class="project-tags">
               <div>
                 <ul id="modal-languages">
-                  <li>FACEBOOK</li>
+                  <li>Canopy</li>
                   <li>
-                    <span><i class="fas fa-circle"></i></span> Full Stack Dev
+                    <span><i class="fas fa-circle"></i></span> BackEnd Dev
                     <span><i class="fas fa-circle"></i></span>
                   </li>
                   <li>2015</li>
@@ -395,45 +398,57 @@
               </div>
             </div>
           </div>
-          <div class="modal-project-img" id="modal-project-img">
-            <img
-            class="modal-image"
-            src="./assets/project_img3.png"
-            alt="project_img1"
-          />
-          </div>
+      
         </div>
       </div>
       <div class="modal-body">
-       <div>
-        <div>
-          <p class="project-description" id="modal-project-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque ipsa id quaerat veniam amet similique ex aliquid, modi dignissimos temporibus nemo odit corrupti, reprehenderit voluptatem magnam autem? Doloremque, magni
-          </p>
-        </div>
-        <div class="modal-body-technologies">
-          <div class="container-skill">
-            <ul>
-              <li><button class="skill-button">html</button></li>
-              <li>
-                <button class="skill-button ruby">Javascript</button>
-              </li>
-              <li>
-                <button class="skill-button">css</button>
-              </li>
-              <li><button class="skill-button">Github</button></li>
-              <li><button class="skill-button">ruby</button></li>
-              <li><button class="skill-button">Bootstrap</button></li>
-            </ul>
+        <div class="modal-project-img" >
+            <img
+            class="modal-image"
+            src="./assets/project_img1.png"
+            id="modal-project-img"
+            alt="project_img1"
+          />
           </div>
-          <button class="see-project" id="modal-project-live">See Live 
-            <img src="./assets/Icon.svg" alt="icon">
-          </button>
-          <button class="see-project" id="modal-project-source">See Project<i class="fab fa-github"></i></button>
+        <div class="modal-technologies">
+          <div>
+              <p class="project-description" id="modal-project-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque ipsa id quaerat veniam amet similique ex aliquid, modi dignissimos temporibus nemo odit corrupti, reprehenderit voluptatem magnam autem? Doloremque, magni Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aperiam harum sed officiis porro vero excepturi odio pariatur fuga, veritatis eum natus quod reiciendis nemo, non id iusto? Possimus, voluptatem.
+                      </p>
+          </div>
+        
+          <div class="modal-body-technologies">
+              <div class="container-skill wrap">
+                <ul>
+                  <li><button class="skill-button">html</button></li>
+                  <li>
+                    <button class="skill-button">Javascript</button>
+                  </li>
+                  <li>
+                    <button class="skill-button">css</button>
+                  </li>
+                  <li><button class="skill-button github">Github</button></li>
+                  <li><button class="skill-button ruby">ruby</button></li>
+                  <li><button class="skill-button bootstrap">Bootstrap</button></li>
+                </ul>
+              </div>
+              <button class="see-project" id="modal-project-live">See Live 
+                <img src="./assets/Icon.svg" alt="icon">
+              </button>
+              <button class="see-project" id="modal-project-source">See Project<i class="fab fa-github"></i></button>
+          
         </div>
-       </div>
+
+     
+        </div>
+         
+      
       </div>
       </div>
+
+
+      </div>
+
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
