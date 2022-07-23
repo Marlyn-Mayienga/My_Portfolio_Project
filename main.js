@@ -40,11 +40,11 @@ function checkUppercase(str) {
   return true;
 }
 
-  if (username.value === '') {
-    errorMessage.textContent = 'Name cannot be blank';
-    errorMessage.classList.add('show');
-    e.preventDefault();
-    return;
+if (username.value === '') {
+  errorMessage.textContent = 'Name cannot be blank';
+  errorMessage.classList.add('show');
+  e.preventDefault();
+  return;
   return str !== str.toLowerCase();
 }
 const username = document.getElementById('username');
@@ -194,19 +194,19 @@ window.onclick = function (event) {
     modal.style.display = 'none';
   }
 };
-  // If Above Validation Passes Remove Error Banner from All Existing Error Validations
-  errorMessage.classList.remove('show');
+// If Above Validation Passes Remove Error Banner from All Existing Error Validations
+errorMessage.classList.remove('show');
 
-  // Form Data
-  const formData = {
-    [KEY_USERNAME]: username.value,
-    [KEY_EMAIL]: email.value,
-    [KEY_MESSAGE]: message.value,
-  };
+// Form Data
+const formData = {
+  [KEY_USERNAME]: username.value,
+  [KEY_EMAIL]: email.value,
+  [KEY_MESSAGE]: message.value,
+};
 
-  // Save to Local Storage
-  localStorage.setItem(KEY_FORM, JSON.stringify(formData));
-  return true;
+// Save to Local Storage
+localStorage.setItem(KEY_FORM, JSON.stringify(formData));
+return true;
 }
 
 function saveDataToLocalStorage(key, value) {
