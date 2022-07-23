@@ -395,6 +395,7 @@ form input {
   padding: 10px 20px;
   margin-top: 20px;
   background-color: white;
+  text-decoration: none;
 }
 
 .see-project:hover {
@@ -407,6 +408,19 @@ form input {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.wrap ul {
+  flex-wrap: wrap;
+  margin-bottom: 0 !important;
+}
+
+.wrap ul li {
+  margin: 5px;
+}
+
+hr {
+  border: 1px solid #dfe1e6;
 }
 
 .container-technologies li:first-child {
@@ -438,6 +452,136 @@ form input {
 
 .show {
   display: block !important;
+}
+
+/* Modal */
+
+/* Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  border: 1px solid #ebecf0;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(30px);
+  backdrop-filter: brightness(60%);
+  backdrop-filter: contrast(40%);
+  opacity: 90%;
+}
+
+.overlay {
+  background-image: url("./assets/desktop-overlay.png");
+  display: block;
+  position: fixed;
+  z-index: -100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  border: 1px solid #ebecf0;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(80px);
+  opacity: 90%;
+  filter: blur(300px);
+}
+
+/* Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The Close Button */
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30px;
+  color: #aaa;
+  float: right;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+}
+
+.modal-project-headline h5 {
+  color: #091e42;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: left;
+  margin-top: 5px !important;
+  margin-bottom: 0;
+}
+
+.modal-project-img {
+  width: 100%;
+}
+
+.modal-image {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.modal-technologies {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.modal-column {
+  width: 80%;
+  flex: 0 0 50%;
+  margin: 5px;
+}
+
+.see-modal-project {
+  color: #396df2;
+  border: 1px solid #396df2;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: white;
+  text-decoration: none;
+  margin: 2px;
+  height: 45px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.modal-tags {
+  margin-bottom: 0 !important;
 }
 
 @media only screen and (max-width: 770px) {
@@ -491,12 +635,13 @@ form input {
   .menu {
     position: fixed;
     transform: translateY(-100%);
+    transition: transform 0.2s;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
-    background: #6070ff;
+    z-index: 99;
+    background: #191765;
     color: white;
     list-style: none;
     width: 100%;
@@ -506,8 +651,6 @@ form input {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    backdrop-filter: blur(10px);
-    opacity: 0.9;
   }
 
   .menuItem {
@@ -525,7 +668,14 @@ form input {
   }
 
   .nav-bar ul {
-    display: block;
+    display: none;
+    color: white;
+    width: 12px;
+    font-size: 2rem;
+    height: 12px;
+    size: 30;
+    margin: 15px;
+    margin-bottom: 50px;
   }
 
   .logo-title {
@@ -568,10 +718,6 @@ form input {
 
   .images {
     width: 50%;
-  }
-
-  .ruby {
-    display: none;
   }
 
   .works {
@@ -663,5 +809,44 @@ form input {
     border-radius: 6px;
     padding-left: 3px;
     padding-right: 3px;
+  }
+
+  .modal-content {
+    width: 85%;
+    padding: 4px;
+  }
+
+  .modal {
+    background-image: url(./assets/Overlay.png);
+  }
+
+  .modal-technologies {
+    grid-template-columns: 1fr;
+  }
+
+  .ruby {
+    display: none;
+  }
+
+  .bootstrap {
+    display: none;
+  }
+
+  .github {
+    display: none;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15px;
+  }
+
+  .modal-finish {
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+    width: 50%;
   }
 }

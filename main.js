@@ -1,13 +1,14 @@
-// Define Form Constants
 const KEY_USERNAME = 'username';
 const KEY_EMAIL = 'email';
 const KEY_MESSAGE = 'message';
 const KEY_FORM = 'form';
+let getDataValue;
 
 const menu = document.querySelector('.menu');
 const hamburger = document.querySelector('.hamburger-btn');
 const closeIcon = document.querySelector('.closeIcon');
 const menuIcon = document.querySelector('.menuIcon');
+const modal = document.querySelector('#modal');
 
 function toggleMenu() {
   if (menu.classList.contains('showMenu')) {
@@ -48,6 +49,15 @@ function handleSubmit(e) {
     return false;
   }
   errorMessage.classList.remove('show');
+
+  form.addEventListener('submit', handleSubmit);
+
+  // Local storage//
+  // This is the section for data binding//
+
+  const getData = localStorage.getItem('DATA');
+  // eslint-disable-next-line no-unused-vars
+  const getDataValue = JSON.parse(getData);
 
   // Do Username Length Validation
   if (username.value.length < 3 || username.value.length > 20) {
@@ -119,11 +129,11 @@ window.addEventListener('load', () => {
   const formJSON = JSON.parse(formData);
   if (formJSON) {
     // Set Username
-    if (formJSON[KEY_USERNAME])username.value = formJSON[KEY_USERNAME];
+    if (formJSON[KEY_USERNAME]) username.value = formJSON[KEY_USERNAME];
     // Set Email
-    if (formJSON[KEY_EMAIL])email.value = formJSON[KEY_EMAIL];
+    if (formJSON[KEY_EMAIL]) email.value = formJSON[KEY_EMAIL];
     // Set Message
-    if (formJSON[KEY_MESSAGE])message.value = formJSON[KEY_MESSAGE];
+    if (formJSON[KEY_MESSAGE]) message.value = formJSON[KEY_MESSAGE];
   }
 
   // Register User Input Change Handler
@@ -145,3 +155,94 @@ window.addEventListener('load', () => {
     saveDataToLocalStorage(KEY_MESSAGE, e.target.value);
   });
 });
+
+// Popup Window//
+// projects object//
+const projects = [
+  {
+    projectTitle: 'Tonic',
+    description:
+      'project#0 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './assets/project_img1.png',
+    languages: ['Canopy', 'Back End Dev', '2015'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
+  },
+  {
+    projectTitle: 'Multi-Post Stories',
+    description:
+      'project#1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './assets/project_img2.png',
+    languages: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
+  },
+  {
+    projectTitle: 'FACEBOOK 360',
+    description:
+      'project#2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './assets/project_img3.png',
+    languages: ['FACEBOOK', 'Full Stack Dev', '2015'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
+  },
+  {
+    projectTitle: 'Uber Navigation',
+    description:
+      'project#3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum molestias, quod recusandae asperiores similique quos aperiam aspernatur, ipsam autem fuga minima libero dolor accusantium corporis possimus quaerat repellat harum distinctio!',
+    mainImage: './assets/project_img4.png',
+    languages: ['Uber', 'Lead Developer', '2018'],
+    linkToLiveVersion: '#',
+    linkToSource: '#',
+  },
+];
+
+// modal window
+
+// eslint-disable-next-line no-unused-vars
+function openModal(num = null) {
+  if (num != null) {
+    // eslint-disable-next-line no-undef
+    modal.style.display = 'block';
+    const project = projects[num];
+    const { languages } = project;
+    let languagesList = '';
+    languages.forEach((listedItem, index) => {
+      languagesList += `<li>${listedItem}</li>
+        ${
+  index < languages.length - 1
+    ? '<span><i class="fas fa-circle"></i></span>'
+    : ''
+}
+        `;
+    });
+
+    document.getElementById('modal-project-name').innerHTML = project.projectTitle;
+    document.getElementById('modal-languages').innerHTML = languagesList;
+    document.getElementById('modal-project-img').src = project.mainImage;
+    document.getElementById('modal-project-live').href = project.linkToLiveVersion;
+    document.getElementById('modal-project-source').href = project.linkToSource;
+
+    modal.classList.add('active');
+  }
+}
+
+// eslint-disable-next-line no-unused-vars
+function closeModal(id = null) {
+  if (id != null) {
+    modal.style.display = 'none';
+  }
+}
+
+window.addEventListener('load', () => {
+  if (localStorage.getItem('DATA')) {
+    document.querySelector('#username').value = getDataValue.fullname;
+    document.querySelector('#email').value = getDataValue.EmailAdress;
+    document.querySelector('#msg').value = getDataValue.message;
+  }
+});
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+};
