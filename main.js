@@ -29,7 +29,6 @@ const form = document.getElementById('form');
 
 // Check if String has Uppercase
 function checkUppercase(str) {
-
   for (let i = 0; i < str.length; i += 1) {
     if (
       str.charAt(i) !== str.charAt(i).toUpperCase()
@@ -40,11 +39,6 @@ function checkUppercase(str) {
   }
   return true;
 }
-function handleSubmit(e) {
-  const username = document.getElementById('username');
-  const email = document.getElementById('email');
-  const errorMessage = document.getElementById('error');
-  const message = document.getElementById('msg');
 
   if (username.value === '') {
     errorMessage.textContent = 'Name cannot be blank';
@@ -53,7 +47,6 @@ function handleSubmit(e) {
     return;
   return str !== str.toLowerCase();
 }
-
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('msg');
